@@ -3,14 +3,12 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Icon } from "react-native-vector-icons";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+import Calendar from "./components/Calendar";
 
 export default function App() {
   return (
     <>
-      <View style={styles.container}>
-        <Text>This is a new mobile app!</Text>
-        <StatusBar style="auto" />
-      </View>
+      <Calendar />
       <View style={styles.bottomNav}>
         <FontAwesome5
           name="calendar-day"
@@ -41,6 +39,7 @@ const styles = StyleSheet.create({
   },
   bottomNav: {
     display: "flex",
+    width: "100%",
     flexDirection: "row",
     height: "10%",
     backgroundColor: "#ececec",
@@ -48,5 +47,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingLeft: "10%",
     paddingRight: "10%",
+    position: "absolute",
+    bottom: 0,
   },
 });
